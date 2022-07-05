@@ -1,0 +1,273 @@
+:root{
+    --Allcolor:#1cbe29;
+    --span :#39a763;
+    --picture : lawngreen;
+
+}
+
+.picture
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30ch,1fr));
+    grid-gap: 2.5rem;
+    margin-top:4rem;
+    background: var(--picture);
+    padding-right: 3%;
+}
+/*.card1
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30ch,1fr));
+    grid-gap: 2.5rem;
+    margin-top:4rem;
+    background: var(--picture);
+    padding-right: 3%;
+}
+
+.card2
+{
+    display: flex;
+    overflow-x: scroll;
+}
+*/
+.picture2 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30ch,1fr));
+    grid-gap: 2.5rem;
+    margin-top:4rem;
+    background: var(--picture);
+    padding-right: 3%;
+}
+
+.read 
+{
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0.45);
+    padding-bottom: 1rem;
+    list-style: none;
+}
+
+
+.see 
+{
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0.45);
+    padding-bottom: 1rem;
+    list-style: none;
+}
+
+ .picture .see img
+{
+    width: 100%;
+    height: max(10rem);
+
+}
+
+ .sectiondouble
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25ch,1fr));
+    grid-gap: 2.5rem;
+    margin-top:2% ;
+    padding-right: 0.5%;
+    list-style: none;
+    background: var(--picture);
+    width: 100%;
+
+}
+
+.section + h3
+{
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: georgia;
+}
+
+.two 
+{
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0.45);
+    padding-bottom: 1rem;
+    list-style: none;
+}
+
+
+.elephant 
+{
+    width: 100%;
+    background: var(--picture);
+
+}
+
+.elephant h4
+{
+    font-size: 2.5em;
+    font-family: georgia;
+    margin-top: -5rem;
+}
+
+
+
+.elephant p 
+{
+    color: white;
+    text-align: center;
+}
+
+.elephant h4
+{
+    color: white;
+    text-align: center;
+    margin-bottom: 5rem;
+
+}
+
+.picture .see p 
+{
+    text-align: center;
+}
+
+.picture .see h3
+{
+    
+    text-align: center;
+    color: green;
+}
+
+img ~* 
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+/*.container1
+{
+    width: 100%;
+    height: max(45rem);
+    background: black;
+    display: flex;
+}
+*/
+
+footer ul
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30ch,1fr));
+    grid-gap: 2.5rem;
+    margin-top:20rem;
+    background: green;
+    padding-right: 3%;
+    list-style: none;
+
+}
+
+footer 
+{
+    list-style: none;
+    color: white;
+}
+
+
+
+h2
+{
+    
+   margin-top: -300px;
+    color: red;
+}
+
+header
+{
+    background: var(--Allcolor);
+}
+
+span
+{
+    background: var(--span);
+    color: white;
+}
+
+img
+{
+    margin-top: 25px;
+    width: 100%;
+    height: max(20rem);
+}
+
+
+/*page contact le formualire d'inscript*/
+
+.formulaire{
+    width: 50%;
+    height: 100px;
+}
+
+
+
+/*input
+{
+
+  width: 45%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid yellowgreen;
+  margin-top: 40px;
+  border-radius: 8px 8px ;
+  margin-left: 33%;
+
+}
+*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--Allcolor);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+
+    .banniere{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 2px 3px 4px;
+    }
+}
