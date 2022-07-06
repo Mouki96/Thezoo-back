@@ -1,10 +1,3 @@
-<?php 
-    include "Database/database.php" ;        
-
- ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,15 +42,18 @@
             <ul class="picture2">
 
              <?php 
-                require_once "models/homeModel.php";
-                foreach ($stat as $accueil) {
-                    
+                require 'models/database.php';
+
+               $connexion = DataBase::connect();
+               $stat=$connexion->query('SELECT * FROM animals');
+
+               $stat->execute();
+                foreach($stat as $accueil){
                 
             ?>
            <li class="read" >
                <h3><?= $accueil["nom"]; ?></h3>
-               <img src="images/<?php  echo $accueil["image"] ;?>">
-
+            <img src="images/"<?php echo $accueil['image']; ?> 
                <p><?php  echo $accueil["description"] ; ?></p> 
            </li>
 

@@ -1,11 +1,9 @@
 <?php 
 	require "database.php";
 
-	$sql="SELECT nom,description,image FROM animals";
-	$stat=$connexion->prepare($sql);
+	$stat=$connexion->prepare('SELECT * FROM animals');
 
 	$stat->execute();
-	$stat->fetchAll();
-
+	$home = $stat->fetchAll();
 
  ?>
