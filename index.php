@@ -46,33 +46,23 @@
 
     	<div class="section2">
 
-       <ul class="picture2">
+            <ul class="picture2">
+
+             <?php 
+                require_once "models/homeModel.php";
+                foreach ($stat as $accueil) {
+                    
+                
+            ?>
            <li class="read" >
-               <h3>Une giraffe</h3>
-               <img src="images/giraffe.jpg" alt="photo de giraffe">
-               <p>La giraffe est un animal très attentionée gentille très douce</p> 
+               <h3><?= $accueil["nom"]; ?></h3>
+               <img src="images/<?php  echo $accueil["image"] ;?>">
+
+               <p><?php  echo $accueil["description"] ; ?></p> 
            </li>
 
-           <li class="read">
-                <h3>un chien</h3>
-               <img src="images/chien.jpg" alt="photo de chien">
-               <p>Le chien est un animal domestique très doux ,intelligent </br> 
-               qui adore les enfants </p>
-               
-           </li>
+                <?php }  ?>
 
-           <li class="read">
-               <h3>un lion</h3>
-               <img src="images/lion.jpg" alt="photo de lion">
-               <p>Le lion est le roi de la savane et c'est un animal très dangereux </ br> </p>
-               
-           </li>
-
-           <li class="read">
-               <h3>flamard rose</h3>
-               <img src="images/no.jpg" alt="photo de lion">
-               <p>Rose bonbon est le roi de la savane et c'est un animal très dangereux </ br> </p> 
-           </li>
        </ul>
 
     </div>
