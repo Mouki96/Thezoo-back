@@ -60,29 +60,9 @@
     </div>
     <!-- Fin de la card -->
 
-
-
-
-
-
-
-
-    <footer>
-        <ul>
-            <li>
-                <h1>Nous contactez</h1>
-                <p> Pour nous joindre appeller au:</p>
-            </li>
-            <li>
-                <h1>Nos références</h1>
-                <p>Nous serions toujours disponible pour vous!</p>
-            </li>
-            <li>
-                <h1>Nos catalogues</h1>
-                <p> ici on présente diverse race d'animaix!</p>
-            </li>
-        </ul>
-    </footer>
+    <?php 
+        require_once('../partials/footer.php');
+    ?>
 
     <script src="../assets/js/feuille.js"></script>
     <script src="../assets/js/filtrage.js"></script>
