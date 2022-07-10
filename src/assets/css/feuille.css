@@ -1,5 +1,3 @@
-
-
 :root {
 --sidebar: white;
 --sidebar_bg: #39a763;
@@ -73,10 +71,6 @@ input
     padding-bottom: 1rem;
     list-style: none;
 }
-
-
-
-
  
  .sectiondouble
 {
@@ -108,15 +102,11 @@ input
     list-style: none;
 }
 
-
 .sectiondouble .two img 
 {
     width: 50%;
     height:12rem;
 }
-
-
-
 
 .picture .see p 
 {
@@ -149,7 +139,6 @@ footer ul
 
 }
 
-
 footer hr 
 {
     /*color: var(--footer_hr);*/
@@ -159,7 +148,6 @@ footer hr
     background: red;
 }
 
-
 footer 
 {
     list-style: none;
@@ -167,8 +155,6 @@ footer
     color: white;
     padding-bottom: 40px;
 }
-
-
 
 h2
 {
@@ -202,8 +188,6 @@ img
 /*end the page principal*/
 
 
-
-
 /*card*/
 
 .card1 
@@ -225,8 +209,6 @@ img
         overflow-x: scroll;
     }
 }
-
-
 
 .sidenav {
     height: 100%;
@@ -272,9 +254,6 @@ img
         font-size: 18px;
     }
 }
-
-
-
 
 /* For all screen */
         

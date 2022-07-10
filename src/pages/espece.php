@@ -1,5 +1,5 @@
 <?php 
-     require "models/especesModel.php";
+     require "../../models/especesModel.php";
 
  ?>
 
@@ -10,10 +10,9 @@
 	 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TheZOO | Acceuil</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/feuille.css">
-	<title>Page de recherche</title>
+    <title>TheZOO | especes </title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/feuille.css">
 </head>
 <body>
 
@@ -26,17 +25,17 @@
         <header> TheZOO
         </header>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="search.html">Espèces</a></li>
-            <li><a href="categorie.html">Catégories</a></li>
+            <li><a href="../../index.php">Accueil</a></li>
+            <li><a href="./espece.php">Espèces</a></li>
+            <li><a href="./categorie.php">Catégories</a></li>
             <li><a href="#">A Propos</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./Contact.php">Contact</a></li>
         </ul>
     </div>
 
     <input type="search" name="search" placeholder="Rechercher un animal" id="Filt"
-    onkeyup="searchFilter()">
+    onkeydown="searchFilter()">
     <!-- debut de nos cards contenant différent espèces -->
 
      <div class="card1">
@@ -49,7 +48,7 @@
            ?>
            <li class="see" >
                 <h3><?php echo  $espece['nom']; ?></h3>
-               <img src="images/<?php echo $espece['image']; ?>">
+               <img src="../assets/images/<?php echo $espece['image']; ?>">
                <p><?php echo $espece['description']; ?></p>
                
            </li>
@@ -85,8 +84,8 @@
         </ul>
     </footer>
 
-    <script src="js/feuille.js"></script>
-    <script src="js/filtrage.js"></script>
+    <script src="../assets/js/feuille.js"></script>
+    <script src="../assets/js/filtrage.js"></script>
 
 </body>
 </html>

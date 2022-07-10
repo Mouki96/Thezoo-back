@@ -1,6 +1,7 @@
 function searchFilter() {
 
-	var filt,filtelement,h3, ul ,li,i ;
+	let filt, filtelement, h3, ul, li;
+	
 	filt = document.getElementById("Filt");
 	filtelement = filt.value.toUpperCase();
 	ul = document.getElementById("listener");
@@ -17,7 +18,8 @@ function searchFilter() {
 	  	li[i].style.display = "";
 
 	  } else {
-	  	li[i].style.display = "none";
+
+		li[i].style.display = "none";			
 	  }
 
 	}

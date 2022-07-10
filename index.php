@@ -17,12 +17,12 @@
         <header> TheZOO
         </header>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="search.html">Espèces</a></li>
-            <li><a href="categorie.html">Catégories</a></li>
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="./src/pages/espece.php">Espèces</a></li>
+            <li><a href="./src/pages/categorie.php">Catégories</a></li>
             <li><a href="#">A Propos</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="./src/pages/Contact.php">Contact</a></li>
         </ul>
     </div>
 
@@ -59,13 +59,6 @@
 
     </div>
 
-
-
-
-
-
-
-
       <footer>
         <ul>
 
@@ -88,12 +81,6 @@
         	<p>Created By Mouki_Bakuss</p>
         </div>
     </footer>
-
-
-  
-
-
-
     
 </body>
 </html>
