@@ -9,7 +9,7 @@
 
         $nom          = $_POST['nom'];
         $description  = $_POST['description'];
-        $image        = $_FILES['image'];
+        
 
         if(empty($nom)) {
             $nomError = " remplissez le nom ";
@@ -21,9 +21,9 @@
             $isSuccess = false;
 
         }
-        if(empty($image)) {
+        if(($_FILES['image']['error']== 4)) {
 
-            $nomError = " Choisissez une image ";
+            $imageError = " Choisissez une image ";
             $isSuccess = false;
 
         }
@@ -45,9 +45,10 @@
             $imageError = 'La taille de l\'image ne doit dépasser 2Mo pour la rapidité de votre application,  choississez-en une autre';
             $isValid = false;      
         }
-        if($isSuccess && $isValid){
 
-            $imageDir ='../src/assets/image/';
+         /*if($isSuccess && $isValid)*//*{*/
+
+            $imageDir ='../src/assets/images/';
             $imageFile = $imageDir . basename($image);
             // Move image into good folder
             $moveImage = move_uploaded_file($_FILES['image']['tmp_name'], $imageFile);
@@ -56,11 +57,12 @@
             
             $insertValeur = $connexion->prepare("INSERT INTO animals (nom, description, image)
             VALUES (:nom, :description, :image)");
-            $insertValeur->bindParam(':nom', $nom);
-            $insertValeur->bindParam(':description', $description);
-            $insertValeur->bindParam(':image', $image);
+            $insertValeur->execute(array('nom'=> $nom,
+                                        'description'=> $description,
+                                        'image'=> $image));
+            
             /*$insertValeur->/*execute();*/
-        }
+        /*}*/
     }
 }
     
@@ -68,14 +70,18 @@
 
 
 
+ 
+
+
  <!DOCTYPE html>
  <html>
  <head>
- 	<meta charset="utf-8">
- 	<title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <title></title>
  </head>
  <body>
- 	<form action="insert.php" method="POST">
+    <form action="insert.php" method="POST" enctype="multipart/form-data">
     <div>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom">
@@ -93,6 +99,8 @@
         <label for="image">Image:</label>
         <input type="file" id="image" name="image">
         <span class="error"> <?php echo $imageError ?> </span>
+
+        <button type="submit">Valider</button>
 
     </div>
     
