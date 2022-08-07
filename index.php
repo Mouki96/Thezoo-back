@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/feuille.css">
+	<link rel="stylesheet" type="text/css" href="src/assets/css/feuille.css">
 	<title></title>
 </head>
 <body>
@@ -28,7 +28,7 @@
 
 
          <div class="banniere">
-             <img src="images/banini.jpg" alt="l'éléphant" title="faune">
+             <img src="src/assets/images/banini.jpg" alt="l'éléphant" title="faune">
              <h2>King of Animals</h2>
         </div>
 
@@ -49,7 +49,7 @@
             ?>
            <li class="read" >
                <h3><?= $accueil["nom"]; ?></h3>
-            <img src="images/<?php echo $accueil['image']; ?>"> 
+            <img src="src/assets/images/<?php echo $accueil['image']; ?>"> 
             <p><?php  echo $accueil["description"] ; ?></p> 
            </li>
 
