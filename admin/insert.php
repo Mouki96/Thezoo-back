@@ -1,7 +1,19 @@
 
 <?php 
-	include ("../database.php");
+	include ("../Database/database.php");
+ 
+
+    // Insertion de données dans la table 'animal' de notre base de données 'db_thezoo'
+
+    $insertValeur = $connexion->prepare("INSERT INTO animals (nom, description, image)
+    VALUES (:nom, :description, :image)");
+    $insertValeur->bindParam(':nom', $nom);
+    $insertValeur->bindParam(':description', $description);
+    $insertValeur->bindParam(':image', $image);
+    /*$insertValeur->/*execute();*/
+    
  ?>
+
 
 
  <!DOCTYPE html>
@@ -11,7 +23,7 @@
  	<title></title>
  </head>
  <body>
- 	<form>
+ 	<form action="insert.php" method="POST">
     <div>
         <label for="nom">Nom :</label>
         <input type="text" id="nom" name="nom">
@@ -24,22 +36,10 @@
 
     <div>
         <label for="image">Image:</label>
-        <input type="image" id="image" name="image">
+        <input type="file" id="image" name="image">
     </div>
     
     
-
-     <?php 
-     	// Insertion de données dans la table 'animal' de notre base de données 'db_thezoo'
-
-    $insertValeur = $connexion->prepare("INSERT INTO animals (nom, description, image)
-    VALUES (:nom, :description, :image)");
-    $insertValeur->bindParam(':nom', $nom);
-    $insertValeur->bindParam(':description', $description);
-    $insertValeur->bindParam(':image', $image);
-    $insertValeur->execute();
-    
-      ?>
 
      
     
